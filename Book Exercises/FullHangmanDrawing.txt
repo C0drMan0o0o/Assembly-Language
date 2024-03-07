@@ -1,0 +1,64 @@
+//Register uses:
+//R0 multiple, temporary, purposes
+//R8 number of wrong guesses
+      MOV R8, #10
+drawPic:
+      CMP R8, #1
+      BLT endDraw
+      MOV R0, #.brown
+      STR R0, .Pixel739 //Upright
+      STR R0, .Pixel707
+      STR R0, .Pixel675
+      STR R0, .Pixel643
+      STR R0, .Pixel611
+      STR R0, .Pixel579
+      STR R0, .Pixel547
+      STR R0, .Pixel515
+      STR R0, .Pixel483
+      STR R0, .Pixel451
+      CMP R8, #2
+      BLT endDraw
+      STR R0, .Pixel452 //Cross beam
+      STR R0, .Pixel453
+      STR R0, .Pixel454
+      STR R0, .Pixel455
+      CMP R8, #3
+      BLT endDraw
+//TODO:
+//Rope, Head, Body, Left leg, Right leg, Left arm, Right arm
+      mov r0, #.grey
+      str r0, .Pixel487 ; rope
+      CMP R8, #4
+      BLT endDraw
+      mov r0, #.pink
+      str r0, .Pixel519 ; head
+      mov r0, #.blue
+      CMP R8, #5
+      BLT endDraw
+      str r0, .Pixel550 ; body
+      str r0, .Pixel551 ; body
+      str r0, .Pixel552 ; body
+      str r0, .Pixel583 ; body
+      str r0, .Pixel615 ; body
+      CMP R8, #6
+      BLT endDraw
+      str r0, .Pixel581 ; left arm
+      CMP R8, #7
+      BLT endDraw
+      str r0, .Pixel585 ; right arm
+      CMP R8, #8
+      BLT endDraw
+      str r0, .Pixel646 ; left leg
+      str r0, .Pixel678 ; left leg
+      str r0, .Pixel710 ; left leg
+      CMP R8, #9
+      BLT endDraw
+      str r0, .Pixel648 ; right leg
+      str r0, .Pixel680 ; right leg
+      str r0, .Pixel712 ; right leg
+      CMP R8, #10
+      BLT endDraw
+      mov r0, #.black
+      str r0, .Pixel519 ; head
+endDraw:
+      HALT

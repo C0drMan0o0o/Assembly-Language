@@ -1,0 +1,25 @@
+      bl getNum1
+      bl getNum2
+      bl printSum
+      halt
+getNum1:
+      mov r0, #msg1
+      str r0, .WriteString
+      ldr r1, .InputNum
+      str r1, .WriteUnsignedNum
+      ret
+getNum2:
+      mov r0, #msg2
+      str r0, .WriteString
+      ldr r2, .InputNum
+      str r2, .WriteUnsignedNum
+      ret
+printSum:
+      add r3, r1, r2
+      mov r0, #sumMsg
+      str r0, .WriteString
+      str r3, .WriteUnsignedNum
+      ret
+msg1: .asciz "Enter num1: "
+msg2: .asciz "\nEnter num2: "
+sumMsg: .asciz "\nSum: "

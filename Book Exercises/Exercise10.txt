@@ -1,0 +1,6 @@
+      mov r0, #99
+      mov r1, #33
+      lsr r2, r0, #2
+      lsr r3, r1, #2
+      add r4, r2, r3
+      halt

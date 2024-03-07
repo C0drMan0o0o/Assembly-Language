@@ -1,0 +1,16 @@
+      mov r0, #msg1
+      str r0, .WriteString
+      ldr r0, .InputNum
+      str r0, .WriteUnsignedNum
+      mov r1, #msg2
+      str r1, .WriteString
+      ldr r1, .InputNum
+      str r1, .WriteUnsignedNum
+      add r2, r0, r1
+      mov r3, #msg3
+      str r3, .WriteString
+      str r2, .WriteUnsignedNum
+      halt
+msg1: .asciz "Enter num1:\n"
+msg2: .asciz "\nEnter num2:\n"
+msg3: .asciz "\nSum = "

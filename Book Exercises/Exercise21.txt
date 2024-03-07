@@ -1,0 +1,9 @@
+      mov r0, #.red
+      str r0, .Pixel0
+      mov r0, #.blue
+      str r0, .Pixel31
+      mov r0, #.green
+      str r0, .Pixel736
+      mov r0, #.orange
+      str r0, .Pixel767
+      halt

@@ -1,0 +1,7 @@
+      MOV R0, #12
+      MOV R1, #7
+      LSL R2, R0, #2
+      LSL R3, R1, #2
+      ADD R4, R2, R3
+      ADD R4, R4, #3
+      HALT

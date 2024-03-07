@@ -1,0 +1,9 @@
+      mov r0, #30
+      mov r1, #5
+      lsl r2, r0, #4
+      lsl r3, r1, #4
+      sub r4, r2, r3
+      sub r4, r4, #7
+      sub r4, r4, #2
+      sub r4, r4, #1
+      halt

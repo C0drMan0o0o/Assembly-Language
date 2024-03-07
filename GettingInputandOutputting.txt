@@ -1,0 +1,9 @@
+      mov r0, #inputTxt
+      mov r2, #outputTxt
+      str r0, .WriteString
+      ldr r1, .InputNum
+      str r2, .WriteString
+      str r1, .WriteUnsignedNum
+      halt
+inputTxt: .asciz "Enter a number:\n"
+outputTxt: .asciz "You entered " 
